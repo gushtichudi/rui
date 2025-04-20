@@ -3,7 +3,7 @@
 
 code here is gathered from many places. i'm just a learner.
 
-**current version:** `0.0.1`
+**current version:** `0.0.0-4`
 
 
 > [!WARNING]

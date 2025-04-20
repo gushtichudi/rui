@@ -3,7 +3,7 @@ CC=./toolchain/i386-elf-7.5.0-Linux-x86_64/bin/i386-elf-gcc
 ASM=./toolchain/i386-elf-7.5.0-Linux-x86_64/bin/i386-elf-as
 
 # meta
-VER=0.0.0-2
+VER=0.0.0-5
 ARCH=i386
 RELEASE_NAME=rui-$(VER)-$(ARCH)
 
