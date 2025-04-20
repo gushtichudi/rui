@@ -63,7 +63,7 @@ main:                           ; ---- main entry -----
 
 
 copyright:      db 'Copyright (c) Morphine 2025. All rights reserved.', BRK, 0
-splash:         db 'rui 0.0.0 bootloader', BRK, 0
+splash:         db 'rui 0.0.0-2 bootloader', BRK, 0
 
 times 510-($-$$) db 0
 dw 0xAA55
