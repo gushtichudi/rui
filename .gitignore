@@ -1,5 +1,6 @@
 toolchain/
 
 *.o
+*.log
 *.bin
 *.img
