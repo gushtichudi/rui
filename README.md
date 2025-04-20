@@ -7,4 +7,5 @@
 
 > [!WARNING]
 > rui is NOT finished yet. many crucial things that make a kernel are yet to be implemented
-> rui will be licensed once it hits version `0.5.0`/.
+>
+> rui will be licensed once it hits version `0.5.0` .
