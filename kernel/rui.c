@@ -1,4 +1,4 @@
-#include "vga.h"
+#include "rui.h"
 
 #if defined(__linux__)
 #error "cross compiler did NOT work"

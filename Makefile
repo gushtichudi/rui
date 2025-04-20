@@ -11,7 +11,7 @@ RELEASE_NAME=rui-$(VER)-$(ARCH)
 
 kernel:
 	$(ASM) boot.asm -o boot.o
-	$(CC) -c kernel/vga.c -o kernel.o -std=gnu99 -ffreestanding -O2 -Wall -Wextra
+	$(CC) -c kernel/rui.c -o kernel.o -std=gnu99 -ffreestanding -O2 -Wall -Wextra
 	$(CC) -T link.ld -o rui.bin -ffreestanding -O2 -nostdlib boot.o kernel.o -lgcc
 
 bin2iso: rui.bin
