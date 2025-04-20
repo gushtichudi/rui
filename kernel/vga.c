@@ -75,11 +75,11 @@ void
 tty_putc (char c)
 {
   tty_putentry(c, t->clr, t->row, t->col);
-  if (++t->col == VGA_COL) {
-    t->col = 0;
+  if (++t->row == VGA_ROW) {
+    t->row = 0;
 
-    if (++t->row == VGA_ROW) {
-      t->row = 0;
+    if (++t->col == VGA_COL) {
+      t->col = 0;
     }
   }
 }
@@ -101,5 +101,5 @@ kernel_main (void)
 {
   tty_init();
 
-  tty_puts("Hello, rui.");
+  tty_puts("Hello, rui.\n");
 }

@@ -4,3 +4,5 @@ toolchain/
 *.log
 *.bin
 *.img
+*.iso
+isodir/

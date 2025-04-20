@@ -6,8 +6,8 @@
 #define VGA_BLACK 0
 #define VGA_WHITE 15
 
-#define VGA_COL 80
-#define VGA_ROW 24
+#define VGA_COL 25
+#define VGA_ROW 80
 #define VGA_MEM 0xB8000
 
 // vga stuff
@@ -20,5 +20,9 @@ void tty_setclr(__uint clr);
 void tty_putentry(char c, __uint clr, size_t x, size_t y);
 void tty_putc(char c);
 void tty_putd(const char *data, size_t sz);
+void tty_puts(const char *str);
+
+// KERNEL !!!
+void kernel_main(void);
 
 size_t strlen(const char *str);
