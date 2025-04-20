@@ -19,10 +19,10 @@ void tty_init(void);
 void tty_setclr(__uint clr);
 void tty_putentry(char c, __uint clr, size_t x, size_t y);
 void tty_putc(char c);
-void tty_putd(const char *data, size_t sz);
-void tty_puts(const char *str);
+void tty_putd(char *data, size_t sz);
+void tty_puts(char *str);
 
 // KERNEL !!!
 void kernel_main(void);
 
-size_t strlen(const char *str);
+size_t strlen(char *str);

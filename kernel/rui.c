@@ -21,7 +21,7 @@ get_entry (__uc c, __uint clr)
 // ---- end of vga stuff ---- //
 
 size_t
-strlen (const char *str)
+strlen (char *str)
 {
   size_t len = 0;
   while (str[len]) len++;
@@ -78,20 +78,32 @@ tty_putc (char c)
   if (++t->row == VGA_ROW) {
     t->row = 0;
 
-    if (++t->col == VGA_COL) {
-      t->col = 0;
-    }
+    if (++t->col == VGA_COL) t->col = 0;
   }
 }
 
 void
-tty_putd (const char *data, size_t sz)
+tty_putd (char *data, size_t sz)
 {
-  for (size_t j = 0; j < sz; ++j) tty_putc(data[j]);
+  // end of string should always be \0
+  data[sz - 1] = '\0';
+  t->col += 1;
+  t->row = 0;
+
+  for (size_t j = 0; j < sz; ++j) {
+    /* if (data[j] == '\n') {
+      t->col += 1;
+      t->row = 0;
+
+      data[j - 1] = '\0';
+      } */
+
+    tty_putc(data[j]);
+  }
 }
 
 void
-tty_puts (const char *str)
+tty_puts (char *str)
 {
   tty_putd(str, strlen(str));
 }
@@ -101,5 +113,6 @@ kernel_main (void)
 {
   tty_init();
 
-  tty_puts("Hello, rui.\n");
+  tty_puts("rui 0.0.1\n");
+  tty_puts("TODO: actually implement the kernel :p\n");
 }
