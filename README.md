@@ -1,6 +1,7 @@
 ### rui
 *..is a 32-bit operating system based on formalities and simplicity of DOS.*
 
+code here is gathered from many places. i'm just a learner.
 
 **current version:** `0.0.1`
 

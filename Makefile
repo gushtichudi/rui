@@ -8,13 +8,8 @@ VER=0.0.0-2
 ARCH=i386
 RELEASE_NAME=rui-$(VER)-$(ARCH).img
 
-all: bl
-
-bl: boot.asm
-	$(ASM) -f bin -o boot.bin boot.asm
-
-bin2img:
-	dd if=boot.bin of=$(RELEASE_NAME) status=progress
+kernel:
+	i686-elf-gcc -c kernel/vga.c -o kernel.o -std=gnu99 -ffreestanding -O2 -Wall -Wextra
 
 start_os: $(RELEASE_NAME)
 	qemu-system-$(ARCH) -chardev stdio,id=char0,logfile=rui-$(VER)-serial.log,signal=off -serial chardev:char0 $(RELEASE_NAME)
