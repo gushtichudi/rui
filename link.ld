@@ -1,6 +1,6 @@
 /*
         NOTE:
-        yes, i did steam this from osdev.org because i don't want to
+        yes, i did steal this from osdev.org because i don't want to
         bother myself with this linker bullshit.
 
         hope you people understand.
