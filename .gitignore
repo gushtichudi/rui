@@ -5,4 +5,4 @@ toolchain/
 *.bin
 *.img
 *.iso
-isodir/
+*/isodir/
